@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dataset Agent</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Dataset Agent</h1>
+      <p>Ask questions about the CSV dataset. Follow-up questions use stored execution results.</p>
+    </header>
+
+    <section id="chat" class="chat"></section>
+
+    <section id="loading" class="loading" hidden>
+      <span class="spinner"></span>
+      Running agent...
+    </section>
+
+    <section id="error" class="error" hidden></section>
+
+    <section class="panel">
+      <h2>Final Answer</h2>
+      <div id="answer">No answer yet.</div>
+    </section>
+
+    <section class="panel">
+      <h2>Execution Result</h2>
+      <div id="tableContainer">No table yet.</div>
+    </section>
+
+    <section class="panel">
+      <h2>Generated Code</h2>
+      <pre id="codeBox">No code yet.</pre>
+    </section>
+
+    <section class="panel">
+      <h2>Visualization</h2>
+      <div id="visualization">No visualization yet.</div>
+    </section>
+
+    <form id="chatForm" class="input-row">
+      <input id="question" type="text" placeholder="Ask a question, e.g. average house value by ocean proximity" required />
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
